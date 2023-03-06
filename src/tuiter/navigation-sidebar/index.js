@@ -5,7 +5,7 @@ import navItems from './navItems';
 const NavigationSidebar = ({ active = 'explore' }) => {
   return (
     <div className="list-group">
-      <a className="list-group-item">Tuiter</a>
+      <a href="/" className="list-group-item">Tuiter</a>
       {navItems.map((item) => {
         return (
           <a
