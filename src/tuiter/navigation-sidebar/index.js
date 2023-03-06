@@ -1,6 +1,7 @@
 import React from 'react';
 import navItems from './navItems';
 
+//test comment
 const NavigationSidebar = ({ active = 'explore' }) => {
   return (
     <div className="list-group">
