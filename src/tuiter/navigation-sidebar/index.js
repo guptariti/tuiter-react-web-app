@@ -1,5 +1,7 @@
 import React from 'react';
 import navItems from './navItems';
+import { Link } from "react-router-dom";
+
 
 //test comment
 const NavigationSidebar = ({ active = 'explore' }) => {
@@ -8,8 +10,8 @@ const NavigationSidebar = ({ active = 'explore' }) => {
       <a href="/" className="list-group-item">Tuiter</a>
       {navItems.map((item) => {
         return (
-          <a
-            href={`${item.link}`}
+          <Link
+            to={item.link}
             className={`list-group-item list-group-item-action
                     ${(item.title).toLowerCase() === active ? 'active' : ''}`}
           >
@@ -17,7 +19,7 @@ const NavigationSidebar = ({ active = 'explore' }) => {
               <i className={`${item.icons}`}></i>
             </span>
             <span className="d-none d-xl-inline">{`${item.title}`}</span>
-          </a>
+          </Link>
         );
       })}
     </div>
