@@ -1,12 +1,12 @@
 const navItems = [
     {
       title: "Home",
-      link: "#",
+      link: "/tuiter",
       icons: ["fa-solid fa-house-chimney"],
     },
     {
       title: "Explore",
-      link: "#",
+      link: "/tuiter/explore",
       icons: ["fa-solid fa-hashtag"],
     },
     {

@@ -11,7 +11,7 @@ const NavigationSidebar = ({ active = 'explore' }) => {
           <a
             href={`${item.link}`}
             className={`list-group-item list-group-item-action
-                    ${active === 'home' ? 'active' : ''}`}
+                    ${(item.title).toLowerCase() === active ? 'active' : ''}`}
           >
             <span style={{ marginRight: '4px' }}>
               <i className={`${item.icons}`}></i>
