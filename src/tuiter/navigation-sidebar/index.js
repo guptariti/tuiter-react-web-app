@@ -3,7 +3,6 @@ import navItems from './navItems';
 import { Link } from "react-router-dom";
 
 
-//test comment
 const NavigationSidebar = ({ active = 'explore' }) => {
   return (
     <div className="list-group">
@@ -11,6 +10,7 @@ const NavigationSidebar = ({ active = 'explore' }) => {
       {navItems.map((item) => {
         return (
           <Link
+            key={item.title}
             to={item.link}
             className={`list-group-item list-group-item-action
                     ${(item.title).toLowerCase() === active ? 'active' : ''}`}

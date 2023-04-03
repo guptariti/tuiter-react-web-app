@@ -1,20 +1,20 @@
 import React from "react";
 import TuitStats from "./tuit-stats";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "./tuits-reducer";
+import {deleteTuitThunk} from "../../services/tuits-thunks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 const TuitItem = ({tuit}) => {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   }
   return (
     <li className="list-group-item">
       <div className="d-flex align-items-start justify-content-start">
         <div className="col-2">
-          <img width={50} className="rounded-circle" src={`../${tuit.image}`} alt="tuit" />
+          <img width={48} height={48} className="rounded-circle" src={`../${tuit.image}`} alt="tuit" />
         </div>
         <div className="col-10">
           <i className="bi bi-x-lg float-end"
